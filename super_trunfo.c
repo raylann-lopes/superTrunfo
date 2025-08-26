@@ -44,7 +44,7 @@ int main() {
     printf("Codigo: %s%s \n", state, code);
     printf("Nome: %s \n", name);
     printf("Populacao: %d \n", population);
-    printf("Area: %f \n", area);
-    printf("PIB: %f \n", PIB);
-    printf("Pontos Turisticos: %d \n", points);
+    printf("Area: %f \n Km", area);
+    printf("PIB: %f \n Bilhoes de reais", PIB);
+    printf("Numero de Pontos Turisticos: %d \n", points);
 }
