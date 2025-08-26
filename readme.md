@@ -1,108 +1,87 @@
-Criando as Cartas do Super Trunfo
+# Super Trunfo de Cidades - Nível 1: Cadastro de Cartas 🃏
 
+Neste primeiro nível, seu objetivo é construir a base do nosso jogo Super Trunfo: um sistema para cadastrar as cartas com informações sobre as cidades. Você vai praticar a leitura de dados do usuário, o armazenamento em variáveis e a exibição dessas informações na tela.
 
-Neste primeiro nível, seu objetivo é construir a base do nosso jogo Super Trunfo de Países: um sistema para cadastrar as cartas com informações sobre as cidades. Você vai praticar a leitura de dados do usuário, o armazenamento em variáveis e a exibição dessas informações na tela.
+## 🎯 O que você vai fazer
 
+Crie um programa em C que permita ao usuário inserir os dados de duas cartas do Super Trunfo. Para cada carta, o usuário deverá fornecer as seguintes informações:
 
-O que você vai fazer
+| Atributo          | Descrição                               | Tipo de Dado |
+|-------------------|-----------------------------------------|--------------|
+| Estado            | Uma letra de 'A' a 'H'.                 | `char`         |
+| Código da Carta   | A letra do estado seguida de um número de 01 a 04 (ex: A01). | `char[]` (string) |
+| Nome da Cidade    | O nome da cidade.                       | `char[]` (string) |
+| População         | O número de habitantes.                 | `int`          |
+| Área (em km²)     | A área da cidade.                       | `float`        |
+| PIB               | O Produto Interno Bruto da cidade.      | `float`        |
+| Pontos Turísticos | A quantidade de pontos turísticos.      | `int`          |
 
+### Exportar para as Planilhas
 
-Criar um programa em C que permita ao usuário inserir os dados de duas cartas do Super Trunfo. Para cada carta, o usuário deverá fornecer as seguintes informações:
+Após o usuário inserir os dados de cada carta, seu programa deve exibir na tela as informações cadastradas de forma organizada.
 
+### Exemplo de Saída Esperada
 
-
-Estado: Uma letra de 'A' a 'H' (representando um dos oito estados). Tipo: char
-
-Código da Carta: A letra do estado seguida de um número de 01 a 04 (ex: A01, B03). Tipo: char[] (um array de caracteres, ou string)
-
-Nome da Cidade: O nome da cidade. Tipo: char[] (string)
-
-População: O número de habitantes da cidade. Tipo: int
-
-Área (em km²): A área da cidade em quilômetros quadrados. Tipo: float
-
-PIB: O Produto Interno Bruto da cidade. Tipo: float
-
-Número de Pontos Turísticos: A quantidade de pontos turísticos na cidade. Tipo: int
-
-
-Após o usuário inserir os dados de cada carta, seu programa deve exibir na tela as informações cadastradas, de forma organizada e legível. Para cada carta, imprima cada informação em uma linha separada, com uma descrição clara. Por exemplo:
-
-
-
+```
 Carta 1:
-
 Estado: A
-
 Código: A01
-
 Nome da Cidade: São Paulo
-
 População: 12325000
-
 Área: 1521.11 km²
-
 PIB: 699.28 bilhões de reais
-
 Número de Pontos Turísticos: 50
 
-
-
 Carta 2:
-
 Estado: B
-
 Código: B02
-
 Nome da Cidade: Rio de Janeiro
-
 População: 6748000
-
 Área: 1200.25 km²
-
 PIB: 300.50 bilhões de reais
-
 Número de Pontos Turísticos: 30
+```
 
+## ✅ Requisitos
 
-Requisitos funcionais
+### Requisitos Funcionais
 
+- [ ] O programa deve ler corretamente os dados de duas cartas do usuário.
+- [ ] O programa deve armazenar os dados lidos em variáveis apropriadas.
+- [ ] O programa deve exibir os dados de cada carta formatados de forma clara.
 
-O programa deve ler corretamente os dados de duas cartas do usuário via entrada padrão (teclado).
+### Requisitos Não Funcionais
 
-O programa deve armazenar os dados lidos em variáveis apropriadas.
+- **Usabilidade**: O programa deve ser fácil de usar, com instruções claras para o usuário.
+- **Legibilidade**: O código deve ser bem indentado, com nomes de variáveis significativos.
+- **Corretude**: O programa deve funcionar sem erros de compilação ou execução.
 
-O programa deve exibir os dados de cada carta na tela, formatados de forma clara e organizada, conforme o exemplo acima.
+## ⚠️ Simplificações para o Desafio
 
-Requisitos não funcionais
+**Importante**: Para este nível, siga estritamente as simplificações abaixo.
 
+- Você só precisa implementar o cadastro e a exibição de duas cartas.
+- Não utilize estruturas de repetição (como `for` ou `while`) ou estruturas de decisão (como `if` ou `else`). Seu código deve ser uma sequência simples de instruções.
 
-Usabilidade: O programa deve ser fácil de usar, com instruções claras para o usuário.
+## 🚀 Entregando seu Projeto
 
-Legibilidade: O código deve ser bem indentado, com comentários explicativos e nomes de variáveis significativos, facilitando a leitura e compreensão.
+Desenvolva seu projeto no GitHub:
 
-Corretude: O programa deve funcionar corretamente, sem erros de compilação ou execução.
+1. Crie um repositório público no GitHub.
+2. Recomendamos usar o GitHub Codespaces para facilitar o desenvolvimento.
 
-Simplificações para o desafio
+Crie o arquivo do seu código:
 
+1. No seu repositório, crie um arquivo chamado `super_trunfo.c` com o seu código C.
 
-Você só precisa implementar o cadastro e a exibição de duas cartas.
+Compile e teste:
 
-Neste nível, foque apenas na leitura, armazenamento e exibição das informações. Você não precisa implementar nenhuma lógica de comparação entre as cartas ou qualquer outro recurso adicional.
+1. Compile e teste seu programa para garantir que ele funciona corretamente.
 
-Não utilize estruturas de repetição (como for ou while) ou estruturas de decisão (como if ou else). Seu código deve ser uma sequência simples de instruções.
+Faça commit e push:
 
-Entregando seu Projeto
+1. Faça commit das suas alterações e envie (`push`) para o seu repositório no GitHub.
 
+Envie o link do repositório:
 
-Desenvolva seu projeto no GitHub: Crie um repositório público no GitHub para o seu projeto. Recomendamos usar o GitHub Codespaces para facilitar o desenvolvimento.
-
-Crie o arquivo do seu código: No seu repositório, crie um arquivo chamado super_trunfo.c com o seu código C.
-
-Compile e teste: Compile e teste seu programa localmente para garantir que ele funciona corretamente.
-
-Faça commit e push: Faça commit das suas alterações e envie (push) para o seu repositório no GitHub.
-
-Envie o link do repositório: Copie o link do seu repositório no GitHub e envie-o através da plataforma SAVA, seguindo as instruções fornecidas.
-
-Lembre-se: este é o primeiro passo. Concentre-se em entender os fundamentos de entrada, processamento e saída de dados em C. Nos próximos níveis, você adicionará mais funcionalidades e complexidade ao seu jogo.
+1. Copie o link do seu repositório no GitHub e envie-o através da plataforma SAVA.
