@@ -1,87 +1,62 @@
-# Super Trunfo de Cidades - Nível 1: Cadastro de Cartas 🃏
+# Desafio: Nível Novato
 
-Neste primeiro nível, seu objetivo é construir a base do nosso jogo Super Trunfo: um sistema para cadastrar as cartas com informações sobre as cidades. Você vai praticar a leitura de dados do usuário, o armazenamento em variáveis e a exibição dessas informações na tela.
+## Comparando Cartas do Super Trunfo
 
-## 🎯 O que você vai fazer
+Você já cadastrou as cartas com suas informações no desafio anterior (incluindo estado, nome, população, área, PIB, e pontos turísticos, além da densidade populacional e PIB per capita calculados). Agora, você irá implementar a lógica do jogo!
 
-Crie um programa em C que permita ao usuário inserir os dados de duas cartas do Super Trunfo. Para cada carta, o usuário deverá fornecer as seguintes informações:
+### O que você vai fazer
 
-| Atributo          | Descrição                               | Tipo de Dado |
-|-------------------|-----------------------------------------|--------------|
-| Estado            | Uma letra de 'A' a 'H'.                 | `char`         |
-| Código da Carta   | A letra do estado seguida de um número de 01 a 04 (ex: A01). | `char[]` (string) |
-| Nome da Cidade    | O nome da cidade.                       | `char[]` (string) |
-| População         | O número de habitantes.                 | `int`          |
-| Área (em km²)     | A área da cidade.                       | `float`        |
-| PIB               | O Produto Interno Bruto da cidade.      | `float`        |
-| Pontos Turísticos | A quantidade de pontos turísticos.      | `int`          |
+Você implementará a lógica para comparar duas cartas e determinar a vencedora com base em um único atributo numérico (como população, área, PIB, etc.). Este desafio é uma continuação do desafio do tema anterior, onde você desenvolveu o cadastro das cartas e você poderá reaproveitar o código de cadastro de cartas que já foi desenvolvido. O foco deste nível é a comparação entre duas cartas já cadastradas, utilizando estruturas de decisão `if` e `if-else`.
 
-### Exportar para as Planilhas
+### Requisitos funcionais
 
-Após o usuário inserir os dados de cada carta, seu programa deve exibir na tela as informações cadastradas de forma organizada.
+Seu programa em C deverá:
 
-### Exemplo de Saída Esperada
+*   **Receber os dados de duas cartas:** O programa deve receber os dados de duas cartas do Super Trunfo. Utilize o código desenvolvido no desafio anterior para o cadastro das cartas. As cartas devem conter os seguintes atributos:
+    *   Estado (string)
+    *   Código da carta (string)
+    *   Nome da cidade (string)
+    *   População (int)
+    *   Área (float)
+    *   PIB (float)
+    *   Número de pontos turísticos (int)
 
-```
-Carta 1:
-Estado: A
-Código: A01
-Nome da Cidade: São Paulo
-População: 12325000
-Área: 1521.11 km²
-PIB: 699.28 bilhões de reais
-Número de Pontos Turísticos: 50
+*   **Calcular Densidade Populacional e PIB per capita:** O programa deve calcular e exibir:
+    *   Densidade Populacional: População / Área
+    *   PIB per capita: PIB / População
 
-Carta 2:
-Estado: B
-Código: B02
-Nome da Cidade: Rio de Janeiro
-População: 6748000
-Área: 1200.25 km²
-PIB: 300.50 bilhões de reais
-Número de Pontos Turísticos: 30
-```
+*   **Comparar um atributo escolhido:** Você deverá escolher apenas um dos atributos numéricos (População, Área, PIB, Densidade Populacional ou PIB per capita) para realizar a comparação entre as duas cartas. Essa escolha deve ser feita diretamente no código, não pela entrada do usuário.
 
-## ✅ Requisitos
+*   **Determinar a carta vencedora:**
+    *   Para todos os atributos, exceto Densidade Populacional, a carta com o maior valor vence.
+    *   Para Densidade Populacional, a carta com o menor valor vence.
 
-### Requisitos Funcionais
+*   **Exibir o resultado da comparação:** O programa deve exibir, de forma clara, qual carta venceu a comparação, incluindo o atributo utilizado na comparação e os valores das duas cartas para aquele atributo. Exemplo:
 
-- [ ] O programa deve ler corretamente os dados de duas cartas do usuário.
-- [ ] O programa deve armazenar os dados lidos em variáveis apropriadas.
-- [ ] O programa deve exibir os dados de cada carta formatados de forma clara.
+    ```
+    Comparação de cartas (Atributo: População):
 
-### Requisitos Não Funcionais
+    Carta 1 - São Paulo (SP): 12.300.000
+    Carta 2 - Rio de Janeiro (RJ): 6.000.000
+    Resultado: Carta 1 (São Paulo) venceu!
+    ```
 
-- **Usabilidade**: O programa deve ser fácil de usar, com instruções claras para o usuário.
-- **Legibilidade**: O código deve ser bem indentado, com nomes de variáveis significativos.
-- **Corretude**: O programa deve funcionar sem erros de compilação ou execução.
+### Requisitos não funcionais
 
-## ⚠️ Simplificações para o Desafio
+*   **Usabilidade:** A saída do programa deve ser clara e fácil de entender.
+*   **Legibilidade:** O código deve ser bem organizado, com comentários explicando a lógica utilizada. Utilize nomes de variáveis descritivos.
+*   **Documentação:** Comente seu código, explicando o propósito de cada parte.
 
-**Importante**: Para este nível, siga estritamente as simplificações abaixo.
+### Simplificações para o nível básico
 
-- Você só precisa implementar o cadastro e a exibição de duas cartas.
-- Não utilize estruturas de repetição (como `for` ou `while`) ou estruturas de decisão (como `if` ou `else`). Seu código deve ser uma sequência simples de instruções.
+*   Neste nível, você irá comparar apenas duas cartas pré-definidas no código.
+*   A escolha do atributo para comparação será feita diretamente no código, não haverá interação com o usuário para escolher o atributo.
+*   Não é necessário implementar menus interativos neste nível. Foque na lógica de comparação utilizando `if` e `if-else`.
 
-## 🚀 Entregando seu Projeto
+### Entregando seu Projeto
 
-Desenvolva seu projeto no GitHub:
-
-1. Crie um repositório público no GitHub.
-2. Recomendamos usar o GitHub Codespaces para facilitar o desenvolvimento.
-
-Crie o arquivo do seu código:
-
-1. No seu repositório, crie um arquivo chamado `super_trunfo.c` com o seu código C.
-
-Compile e teste:
-
-1. Compile e teste seu programa para garantir que ele funciona corretamente.
-
-Faça commit e push:
-
-1. Faça commit das suas alterações e envie (`push`) para o seu repositório no GitHub.
-
-Envie o link do repositório:
-
-1. Copie o link do seu repositório no GitHub e envie-o através da plataforma SAVA.
+*   **Desenvolva seu projeto no GitHub:** Continue usando o mesmo repositório do GitHub dos níveis anteriores.
+*   **Atualize o arquivo do seu código:** Atualize o arquivo `super_trunfo.c` com o código completo, incluindo as novas funcionalidades.
+*   **Compile e teste:** Compile e teste seu programa rigorosamente, garantindo que todas as comparações e cálculos estejam corretos.
+*   **Faça commit e push:** Faça commit das suas alterações e envie (push) para o seu repositório no GitHub.
+*   **Envie o link do repositório:** Envie o link do seu repositório no GitHub através da plataforma SAVA.
