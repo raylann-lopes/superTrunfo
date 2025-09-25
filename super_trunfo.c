@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <stdio.h>
 
 int main() {
@@ -10,6 +9,8 @@ int main() {
     float area = 0;
     float PIB = 0;
     int points = 0;
+    float pibPerCapta;
+    float densidadePopulacional;
 
     printf("======= Super Trunfo =======\n\n");
 
@@ -36,15 +37,23 @@ int main() {
     printf("Insira a quantidade de pontos turisticos que ha na cidade: \n");
     scanf("  %d", &points);
 
+    pibPerCapta = PIB / population;
+    densidadePopulacional = population / area;
+
     printf("Carta Cadastrada com sucesso!");
-    printf("Deseja cadastrar outra carta? S/N ");
 
     printf("Carta %d \n", card);
     printf("Estado: %s \n", state);
     printf("Codigo: %s%s \n", state, code);
     printf("Nome: %s \n", name);
     printf("Populacao: %d \n", population);
-    printf("Area: %f \n Km", area);
-    printf("PIB: %f \n Bilhoes de reais", PIB);
+    printf("Area: %.2f Km \n", area);
+    printf("PIB: %.2f Bilhoes de reais \n", PIB);
     printf("Numero de Pontos Turisticos: %d \n", points);
+    printf("Densidade Populacional: %.2f \n", densidadePopulacional);
+    printf("PIB per capita: %.2f \n", pibPerCapta);
+
+    printf("Deseja cadastrar outra carta? S/N ");
+
+    return 0;
 }
